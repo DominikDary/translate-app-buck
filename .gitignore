@@ -1,0 +1,10 @@
+local.properties
+translate-app.properties
+*.iml
+/.idea
+/buck-cache
+/buck-out
+/.buckd
+*.DS_Store
+lint.xml
+module_app.xml

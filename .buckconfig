@@ -1,0 +1,4 @@
+[alias]
+    app = //apps/translate:app
+[java]
+    src_roots = /java/

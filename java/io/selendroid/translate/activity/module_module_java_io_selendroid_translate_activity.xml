@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_module_java_io_selendroid_translate_activity" default="compile.module.module_java_io_selendroid_translate_activity">
+  <dirname property="module.module_java_io_selendroid_translate_activity.basedir" file="${ant.file.module_module_java_io_selendroid_translate_activity}"/>
+  
+  <property name="module.jdk.home.module_java_io_selendroid_translate_activity" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.module_java_io_selendroid_translate_activity" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.module_java_io_selendroid_translate_activity" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.module_java_io_selendroid_translate_activity" value="${compiler.args}"/>
+  
+  <property name="module_java_io_selendroid_translate_activity.output.dir" value="undefined"/>
+  <property name="module_java_io_selendroid_translate_activity.testoutput.dir" value="undefined"/>
+  
+  <path id="module_java_io_selendroid_translate_activity.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="module_java_io_selendroid_translate_activity.module.production.classpath">
+    <path refid="${module.jdk.classpath.module_java_io_selendroid_translate_activity}"/>
+  </path>
+  
+  <path id="module_java_io_selendroid_translate_activity.runtime.production.module.classpath"/>
+  
+  <path id="module_java_io_selendroid_translate_activity.module.classpath">
+    <path refid="${module.jdk.classpath.module_java_io_selendroid_translate_activity}"/>
+  </path>
+  
+  <path id="module_java_io_selendroid_translate_activity.runtime.module.classpath"/>
+  
+  
+  <patternset id="excluded.from.module.module_java_io_selendroid_translate_activity">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.module_java_io_selendroid_translate_activity">
+    <patternset refid="compiler.excluded"/>
+    <patternset refid="excluded.from.module.module_java_io_selendroid_translate_activity"/>
+  </patternset>
+  
+  <path id="module_java_io_selendroid_translate_activity.module.sourcepath">
+    <dirset dir="${module.module_java_io_selendroid_translate_activity.basedir}/../../../../../buck-out/android/java/io/selendroid/translate/activity">
+      <include name="gen"/>
+    </dirset>
+    <dirset dir="${module.module_java_io_selendroid_translate_activity.basedir}/../../translate">
+      <include name="activity"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.module_java_io_selendroid_translate_activity" depends="compile.module.module_java_io_selendroid_translate_activity.production,compile.module.module_java_io_selendroid_translate_activity.tests" description="Compile module module_java_io_selendroid_translate_activity"/>
+  
+  <target name="compile.module.module_java_io_selendroid_translate_activity.production" depends="register.custom.compilers" description="Compile module module_java_io_selendroid_translate_activity; production classes">
+    <mkdir dir="${module_java_io_selendroid_translate_activity.output.dir}"/>
+    <javac2 destdir="${module_java_io_selendroid_translate_activity.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.module_java_io_selendroid_translate_activity}/javac">
+      <compilerarg line="${compiler.args.module_java_io_selendroid_translate_activity}"/>
+      <bootclasspath refid="module_java_io_selendroid_translate_activity.module.bootclasspath"/>
+      <classpath refid="module_java_io_selendroid_translate_activity.module.production.classpath"/>
+      <src refid="module_java_io_selendroid_translate_activity.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.module_java_io_selendroid_translate_activity"/>
+    </javac2>
+    
+    <copy todir="${module_java_io_selendroid_translate_activity.output.dir}">
+      <fileset dir="${module.module_java_io_selendroid_translate_activity.basedir}/../../../../../buck-out/android/java/io/selendroid/translate/activity/gen">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.module_java_io_selendroid_translate_activity"/>
+      </fileset>
+    </copy>
+    <copy todir="${module_java_io_selendroid_translate_activity.output.dir}/io/selendroid/translate/activity">
+      <fileset dir="${module.module_java_io_selendroid_translate_activity.basedir}">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.module_java_io_selendroid_translate_activity"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.module_java_io_selendroid_translate_activity.tests" depends="register.custom.compilers,compile.module.module_java_io_selendroid_translate_activity.production" description="compile module module_java_io_selendroid_translate_activity; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.module_java_io_selendroid_translate_activity" description="cleanup module">
+    <delete dir="${module_java_io_selendroid_translate_activity.output.dir}"/>
+    <delete dir="${module_java_io_selendroid_translate_activity.testoutput.dir}"/>
+  </target>
+</project>

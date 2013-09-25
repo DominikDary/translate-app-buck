@@ -1,0 +1,12 @@
+android_resource(
+  name = 'res',
+  res = 'res',
+  package = 'io.selendroid.translate',
+  visibility = [
+    '//apps/translate:',
+  ],
+)
+
+project_config(
+  src_target = ':res',
+)
